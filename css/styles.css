@@ -62,8 +62,8 @@ h2.pageTitle::before{content: "";display: block;width: 100%;height: 1px;backgrou
 dl {margin-top:20px;}
 dd{margin-bottom:10px;}
 
-.btn {font-family: 'Open Sans', sans-serif;font-weight:800;text-transform:upperscase;}
-.btn-primary {background-color:#3498db;border-radius:0;border:0;}
+.btn {font-family: 'Open Sans', sans-serif;font-weight:700;text-transform:uppercase;border-radius:0;}
+.btn-primary {background-color:#3498db;border-radius:0;border:0;font-weight:800;}
 .btnLearnMore {position:relative;margin:-10px auto 0 auto; width:300px; display:block;z-index:1;border:1px solid #fff;}
 #locationsLink:hover {opacity:0.7;}
 
