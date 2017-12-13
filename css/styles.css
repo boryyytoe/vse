@@ -14,13 +14,53 @@ family=Open+Sans:700,800|Roboto:300,400,400i,700
 }
 
 a {color:#198CD6;font-weight:700;}
+li {padding:5px 0;}
 h1, h2, h3, h4, h5 {font-family: 'Open Sans', sans-serif;font-weight:800;text-transform:uppercase;margin:20px 0 20px 0;}
 .homepage h1, .homepage h2, .homepage h3, .homepage h4, .homepage h5 {font-family: 'Open Sans', sans-serif;font-weight:800;text-transform:uppercase;margin:20px 0 40px 0;}
 h2 {font-size:40px;color:#2C3E50;font-weight:800;text-transform:uppercase;}
+
 h2.pageTitle {padding-bottom: 20px; position: relative;}
+/*
 [class*="col-"] h2.pageTitle::before{content: "";display: block;width: 115%;height: 1px;background: #3598db; position: absolute;bottom: 0;left: 0;}
 h2.pageTitle::before{content: "";display: block;width: 100%;height: 1px;background: #3598db; position: absolute;bottom: 0;left: 0;}
+*/
 
+.pageTitle{
+ overflow: hidden;
+ text-align: center;
+}
+.pageTitle:before,
+.pageTitle:after {
+ background-color: #2c3e4f;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 50%;
+}
+.pageTitle:before {right: 0.5em; margin-left: -50%;}
+.pageTitle:after {left: 0.5em;margin-right: -50%;}
+
+
+.subTitleRow h3{
+    background: #3598db;
+    box-shadow: -184px 0 0 #3598db;
+    display: inline-block;
+    padding: 10px;
+	color:#fff;
+}
+.sideBar h3 {
+    background: #3598db;
+    box-shadow: -14px 0 0 #3598db, 14px 0 0 #3598db;
+    padding: 20px 0;
+	color:#fff;
+}
+.sideBar h3:first-child {margin-top:0;}
+.sideBar {background-color:#ebebeb;padding-bottom:40px;}
+
+dl {margin-top:20px;}
+dd{margin-bottom:10px;}
 
 .btn {font-family: 'Open Sans', sans-serif;font-weight:800;text-transform:upperscase;}
 .btn-primary {background-color:#3498db;border-radius:0;border:0;}
@@ -36,6 +76,7 @@ h2.pageTitle::before{content: "";display: block;width: 100%;height: 1px;backgrou
 #searchbox {float:right;width:23%;}
 #secondaryNav {max-width: 1170px;margin: 0 auto;}
 #secondaryNav .navbar-right {margin:20px 0 10px 0;}
+.navbar-nav li {padding:0;}
 .navbar-default .navbar-nav > li > a, 
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
@@ -216,6 +257,9 @@ article time {font-weight:700;}
    padding-left: 0;
 }
 
+.subTitleRow {margin-top:60px;}
+.mainContent {}
+
 footer .container {border-top: 1px solid #D6D6D6;padding-top: 10px;}
 
 .flexWrapper {display: flex; flex-flow: row wrap;}
@@ -280,6 +324,11 @@ footer .container {border-top: 1px solid #D6D6D6;padding-top: 10px;}
 .page-contracts article h3 {margin-bottom:0;}
 .page-contracts article img {max-width: 100px;position: absolute; top:-20px; right: 10px;border:1px solid #ccc;padding:3px;background:#fff;border-radius:3px;}
 .page-contracts article:last-child {width:65%;border-color:#e8bd6c;}
+.page-contracts article:last-child dl {border-top:1px solid #ccc;padding:12px 0;margin:0;}
+.page-contracts article:last-child dl::after {content:"";display:block;clear:both;}
+.page-contracts article:last-child dt, .page-contracts article:last-child dd {float:left;}
+.page-contracts article:last-child dt {clear:left;margin-right:8px;}
+.page-contracts article:last-child dd {margin-bottom:4px;}
 
 /* --/Contracts --*/
 
@@ -301,6 +350,21 @@ footer .container {border-top: 1px solid #D6D6D6;padding-top: 10px;}
 	#contactus #contactWrap .col-sm-4 {display:table-cell;float:none;padding-bottom:40px;}
 	#contactus #contactWrap .col-sm-4:nth-child(2) {border-left:0;border-right:0;}
 	header .jumbotron p {padding:0 40px;}
+	/*
+	 * Row with equal height columns
+	 * --------------------------------------------------
+	 */
+	.row-eq-height {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	}
+	div#contactus {
+		margin-top:120px;
+	}
+	.pageTitle{margin: 40px 0;}
+	
 }
 
 @media screen and (max-width: 768px) {
