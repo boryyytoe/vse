@@ -1,6 +1,18 @@
+
+
 var j$ = jQuery.noConflict();
 
 j$(document).ready(function(){
+	
+	var screenWidth = j$(window).width();
+	  // if window width is smaller than 800 remove the autoplay attribute
+	  // from the video
+	  if (screenWidth < 800){
+			j$('#videoBackground').removeAttr('autoplay');
+	  } else {
+		j$('#videoBackground').attr('autoplay');
+	  }
+	
 	var submitIcon = j$('.searchbox-icon');
 	var inputBox = j$('.searchbox-input');
 	var searchBox = j$('.searchbox');
