@@ -1,3 +1,13 @@
+var sources = document.querySelectorAll('video#videoBackground source');
+// Define the video object this source is contained inside
+var video = document.querySelector('video#videoBackground');
+for(var i = 0; i<sources.length;i++) {
+  sources[i].setAttribute('src', sources[i].getAttribute('data-src'));
+}
+// If for some reason we do want to load the video after, for desktop as opposed to mobile (I'd imagine), use videojs API to load
+video.load(); 
+
+
 var j$ = jQuery.noConflict();
 
 j$(document).ready(function(){

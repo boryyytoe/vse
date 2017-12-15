@@ -367,6 +367,11 @@ footer .container {border-top: 1px solid #D6D6D6;padding-top: 10px;}
 	
 }
 
+@media only screen and (max-width: 1439px) and (min-width: 1024px)  {
+	.row-eq-height .col-md-12.col-lg-6 {/*background-color:#3598db;*/background:url(../images/min-max-bg.png) 0% 100% repeat-y;}
+	.row-eq-height .col-md-12.col-lg-6 img {}
+}
+
 @media screen and (max-width: 768px) {
 	.servicesBox br {display:none;}
 	.servicesBox {border:0;}
